@@ -1,0 +1,6 @@
+import sqlite3
+conn = sqlite3.connect('books.db')
+c = conn.cursor()
+
+c.execute('create table books(title varchar(20),author varchar(20), year int)')
+conn.commit()
